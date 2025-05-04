@@ -30,7 +30,7 @@ public struct OpenNGCSyslog:CustomStringConvertible {
 }
 
 public class SwiftOpenNGC:NSObject {
-    internal let baseTapUrl = "http://dc.g-vo.org/tap"
+    internal let baseTapUrl = "https://dc.g-vo.org/tap"
     internal var sysLog:[OpenNGCSyslog] = []
     
     public override init() {
