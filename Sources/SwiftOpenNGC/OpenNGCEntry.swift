@@ -7,12 +7,13 @@
 
 
 import Foundation
+import SwiftQValue
 
 public struct OpenNGCEntry: Codable {
     public let name: String
     public let objType: String
-    public let raj2000: Int
-    public let dej2000: Int
+    public let raj2000: QValue
+    public let dej2000: QValue
     public var constellation: String?
     public var majAxDeg: Float?
     public var minAxDeg: Float?

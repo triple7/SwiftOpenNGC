@@ -15,11 +15,17 @@ let package = Package(
             name: "SwiftOpenNGC",
             targets: ["SwiftOpenNGC"]),
     ],
-    dependencies: [.package(url: "https://github.com/dehesa/CodableCSV.git", from: "0.6.7")],
+    dependencies: [
+        .package(url: "https://github.com/triple7/SwiftQValue", branch: "main"),
+        .package(url: "https://github.com/dehesa/CodableCSV.git", from: "0.6.7")
+    ],
     targets: [
         .target(
             name: "SwiftOpenNGC",
-        dependencies: ["CodableCSV"]),
+        dependencies: [
+            "CodableCSV",
+            .product(name: "SwiftQValue", package: "SwiftQValue"),
+        ]),
             .testTarget(
             name: "SwiftOpenNGCTests",
             dependencies: ["SwiftOpenNGC"]
