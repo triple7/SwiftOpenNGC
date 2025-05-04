@@ -11,8 +11,8 @@ import Foundation
 public struct OpenNGCEntry: Codable {
     public let name: String
     public let objType: String
-    public let raj2000: Float
-    public let dej2000: Float
+    public let raj2000: Int
+    public let dej2000: Int
     public var constellation: String?
     public var majAxDeg: Float?
     public var minAxDeg: Float?
