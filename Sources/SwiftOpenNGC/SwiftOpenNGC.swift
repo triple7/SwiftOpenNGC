@@ -65,7 +65,7 @@ public class SwiftOpenNGC:NSObject {
         print(text)
         let decoder = CSVDecoder {
           $0.headerStrategy = .firstLine
-          $0.delimiters.field = ";"
+          $0.delimiters.field = ","
         }
         let entries: [OpenNGCEntry] = try! decoder.decode([OpenNGCEntry].self, from: text)
         return entries
